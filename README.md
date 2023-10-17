@@ -5,8 +5,8 @@ Collection of [macros](#Macros) and [materializations](#Materializations) for db
 ## Macros
 
 * [Debugging](#debugging)
-   * [debug_print (<a href="macros/debug_print.sql">source</a>)](#debug_print)
-   * [debug_run (<a href="macros/debug_run.sql">source</a>)](#debug_run)
+   * [debug_print (<a href="macros/debug_print.sql">source</a>)](#debug_print-source)
+   * [debug_run (<a href="macros/debug_run.sql">source</a>)](#debug_run-source)
 
 ### debug_print ([source](macros/debug_print.sql))
 
