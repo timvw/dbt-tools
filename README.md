@@ -2,6 +2,16 @@
 
 Collection of [macros](#Macros) and [materializations](#Materializations) for dbt.
 
+## Installation Instructions
+
+[Read the docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
+
+```yml
+packages:
+  - git: "https://github.com/timvw/dbt-tools.git"
+    revision: main
+```
+
 ## Macros
 
 * [Debugging](#debugging)
