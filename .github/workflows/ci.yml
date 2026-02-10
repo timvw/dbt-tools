@@ -15,13 +15,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install dbt
-        run: pip install dbt-core dbt-duckdb
+      - name: Install dependencies
+        run: pip install dbt-core dbt-duckdb yamllint
 
-      - name: Validate project YAML
-        run: python -c "import yaml; yaml.safe_load(open('dbt_project.yml'))"
+      - name: Lint YAML files
+        run: yamllint -d relaxed dbt_project.yml
 
-      - name: Check dbt project
+      - name: Validate dbt project
         run: |
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml << 'PROFILES'
@@ -32,4 +32,4 @@ jobs:
                 type: duckdb
                 path: ":memory:"
           PROFILES
-          dbt parse
+          dbt parse --profile dbt_tools --no-partial-parse
